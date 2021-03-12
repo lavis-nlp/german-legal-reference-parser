@@ -1,5 +1,4 @@
 import re
-import json
 from bs4 import BeautifulSoup
 import models as ms
 
@@ -12,6 +11,17 @@ try:
 except Exception:
     print("laws.txt file is missing")
     exit()
+
+LAWS_STRING = "|".join(LAWS_SET)
+P_absatzRechts = re.compile("<span [^>]*class=\"absatzRechts\">")
+P_rd = re.compile("<a [^>]*name=\"rd_[\d]+\">")
+P_nr = re.compile("(<rd [^>]*nr=\"[\d]+\"/>)")
+P_point = re.compile("<p [^>]*id=\"point[\d]+\">")
+P_simple = re.compile(r"([ ]?§ |[ ]?Art[.] |[ ]?Artikel ).*?((\d|\w)+/)*(%s|[gG]esetz[-\w]*|[oO]rdnung[-\w]*)(/(\d|\w)+)*( [IVXLCDM]*)?" % LAWS_STRING)
+P_multi = re.compile(r"([ ]?§§ ).*?((\d|\w)+/)*(%s|[gG]esetz[-\w]*|[oO]rdnung[-\w]*)(/(\d|\w)+)*( [IVXLCDM]*)?" % LAWS_STRING)
+P_ivm = re.compile(r"([ ]?§ |[ ]?Art[.] |[ ]?Artikel |[ ]?§§ ).*?( [iI][.]?[Vv][.]?[mM][.]? ).*?((\d|\w)+/)*(%s|[gG]esetz[-\w]*|[oO]rdnung[-\w]*)(/(\d|\w)+)*( [IVXLCDM]*)?" % LAWS_STRING)
+P_file = re.compile(r"[ ]?(\d+|[IVXLCDM]+) \w+ \d+[/.]\d+")
+P_split_ivm = re.compile(r" [iI][.]?[Vv][.]?[mM][.]? ")
 
 
 def is_roman(s):
@@ -61,7 +71,7 @@ def is_multi(s):
 def get_vorschrift_from_simple(s):
     try:
         result = s.split(" ")
-        if is_roman(result[-1]):
+        if is_roman(result[-1]) or re.search(r"\d", result[-1]):
             return result[-2]
 
         return result[-1]
@@ -83,7 +93,7 @@ def get_buch_from_simple(s):
 
 
 def get_paragraph_from_simple(s):
-    if re.search(r"-|f[.]", s):
+    if re.search(r"f[.]|,", s) or s.count("-") != s.split(" ")[-1].count("-"):
         raise ms.ReferenceObjectException()
 
     try:
@@ -91,7 +101,7 @@ def get_paragraph_from_simple(s):
         if is_roman(result[1]):
             return roman_to_arabic(result[1])
 
-        if re.match(r"[a-z]\b", result[2]):
+        if re.match(r"[a-z][)]?\b", result[2]):
             return "".join(result[1:3])
 
         return result[1]
@@ -105,17 +115,21 @@ def get_abs_from_simple(s):
         return re.split(r" [Aa]bs[.] | [Aa]bsatz ", s)[1].split(" ")[0]
 
     except Exception:
-        result, relevant_idx = s.split(" "), 2
-        if re.match(r"[a-z]\b", result[relevant_idx]):
-            relevant_idx += 1
+        try:
+            result, relevant_idx = s.split(" "), 2
+            if re.match(r"[a-z][)]?\b", result[relevant_idx]):
+                relevant_idx += 1
 
-        if is_roman(result[relevant_idx]):
-            return roman_to_arabic(result[relevant_idx])
+            if is_roman(result[relevant_idx]):
+                return roman_to_arabic(result[relevant_idx])
 
-        if result[relevant_idx].startswith("(") and result[relevant_idx].endswith(")"):
-            return result[relevant_idx][1:-1]
+            if result[relevant_idx].startswith("(") and result[relevant_idx].endswith(")"):
+                return result[relevant_idx][1:-1]
 
-        return ""
+            return ""
+
+        except Exception:
+            raise ms.ReferenceObjectException()
 
 
 def get_satz_from_simple(s):
@@ -123,22 +137,30 @@ def get_satz_from_simple(s):
         return re.split(r" [Ss][.] | [Ss]atz ", s)[1].split(" ")[0]
 
     except Exception:
-        result, relevant_idx = s.split(" "), 2
-        if re.match(r"[a-z]\b", result[relevant_idx]):
-            relevant_idx += 1
+        try:
+            result, relevant_idx = s.split(" "), 2
+            if re.match(r"[a-z][)]?\b", result[relevant_idx]):
+                relevant_idx += 1
 
-        if is_roman(result[relevant_idx]) or result[relevant_idx].startswith("(") and result[relevant_idx].endswith(")"):
-            relevant_idx += 1
+            if is_roman(result[relevant_idx]) or result[relevant_idx].startswith("(") and result[relevant_idx].endswith(")"):
+                relevant_idx += 1
 
-        if re.match(r"[0-9]+\b", result[relevant_idx]):
-            return result[relevant_idx]
+            if re.match(r"[0-9]+\b", result[relevant_idx]):
+                return result[relevant_idx]
 
-        return ""
+            return ""
+
+        except Exception:
+            raise ms.ReferenceObjectException()
 
 
 def get_nr_from_simple(s):
     try:
-        return re.split(r" [Nn]r[.] | [Nn]ummer | [lL]it[.] | [Ss]piegelstrich | [Bb]uchst[.] | [Bb]uchstabe ", s)[1].split(" ")[0]
+        result = re.split(r" [Nn][r]?[.] | [Nn]ummer | [lL]it[.] | [Ss]piegelstrich | [Bb]uchst[.] | [Bb]uchstabe ", s)[1].split(" ")
+        if re.match(r"[a-z][)]?\b", result[1]):
+            return "".join(result[:2])
+
+        return result[0]
 
     except Exception:
         return ""
@@ -163,6 +185,9 @@ def get_lawrefs_from_multi(s):
             except Exception:
                 pass
 
+        if result == list():
+            raise ms.ReferenceObjectException()
+
         return result
 
     except Exception:
@@ -171,7 +196,7 @@ def get_lawrefs_from_multi(s):
 
 def get_left_from_ivm(s):
     try:
-        result, law_complement = re.split(r" [iI][.]?[Vv][.]?[mM][.]? ", s), ""
+        result, law_complement = P_split_ivm.split(s), ""
         if result[0].split(" ")[-1] not in LAWS_SET:
             law_complement = result[1].split(" ")[-1]
 
@@ -195,7 +220,7 @@ def get_left_from_ivm(s):
 
 def get_right_from_ivm(s):
     try:
-        result = re.split(r" [iI][.]?[Vv][.]?[mM][.]? ", s)[1]
+        result = P_split_ivm.split(s)[1]
         if is_simple(result):
             return ms.SimpleLawRef(result)
 
@@ -209,12 +234,12 @@ def get_right_from_ivm(s):
 
 
 def get_n_kammer_from_fileref(s):
+    if re.search(r"bis|und", s):
+        raise ms.ReferenceObjectException()
+
     result = s.split(" ")
     if len(result) != 3:
         raise ms.ReferenceObjectException()
-
-    if is_roman(result[0]):
-        return roman_to_arabic(result[0])
 
     return result[0]
 
@@ -255,6 +280,35 @@ def get_jahr_from_fileref(s):
     return result[2].split("/")[1]
 
 
+def remove_html(content):
+    try:
+        if P_absatzRechts.search(content):
+            mn_split, mns = remove_html_absatzRechts(P_absatzRechts.split(content))
+
+        elif P_rd.search(content):
+            mn_split, mns = remove_html_rd(P_rd.split(content))
+
+        elif P_nr.search(content):
+            mn_split, mns = remove_html_nr(P_nr.split(content))
+
+        elif P_point.search(content):
+            mn_split, mns = remove_html_point(P_point.split(content))
+
+        else:
+            mn_split, mns = remove_html_none(content)
+
+        offset = 0
+        margin_numbers = dict()
+        for i in range(len(mn_split)):
+            margin_numbers[mns[i]] = offset
+            offset += len(mn_split[i])
+
+        return "".join(mn_split), margin_numbers
+
+    except Exception:
+        return "ERROR: margin number format not recognised", dict()
+
+
 def remove_html_absatzRechts(mn_split):
     return remove_html_common(mn_split)
 
@@ -292,6 +346,60 @@ def remove_html_common(mn_split):
         mn_split[i] = BeautifulSoup(mn_split[i][find_lt:], "html.parser").get_text()
 
     return mn_split, mns
+
+
+def parse_simples(content):
+    result = list()
+    for x in P_simple.finditer(content):
+        if P_split_ivm.search(x.group()):
+            continue
+
+        try:
+            result.append((ms.SimpleLawRef(x.group().strip()), x.start()))
+
+        except ms.ReferenceObjectException:
+            continue
+
+    return result
+
+
+def parse_multis(content):
+    result = list()
+    for x in P_multi.finditer(content):
+        if P_split_ivm.search(x.group()):
+            continue
+
+        try:
+            result.append((ms.MultiLawRef(x.group().strip()), x.start()))
+
+        except ms.ReferenceObjectException:
+            continue
+
+    return result
+
+
+def parse_ivms(content):
+    result = list()
+    for x in P_ivm.finditer(content):
+        try:
+            result.append((ms.IVMLawRef(x.group().strip()), x.start()))
+
+        except ms.ReferenceObjectException:
+            continue
+
+    return result
+
+
+def parse_files(content):
+    result = list()
+    for x in P_file.finditer(content):
+        try:
+            result.append((ms.FileRef(x.group().strip()), x.start()))
+
+        except ms.ReferenceObjectException:
+            continue
+
+    return result
 
 
 def create_custom_simple(dic):

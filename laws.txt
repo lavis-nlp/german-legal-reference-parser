@@ -2,14 +2,14 @@ AAppO
 AAÜG
 ABBergV
 ABBV
-AbfVerbrG 2007
+AbfVerbrG( 2007)?
 AbgG
 AbwasserMeistPrV
 AbwV
-AEG 1994
-AEntG 2009
+AEG( 1994)?
+AEntG( 2009)?
 AFBG
-AFuV 2005
+AFuV( 2005)?
 AGB DDR
 AGG
 AGOZV
@@ -17,7 +17,7 @@ AgrarAusbV
 AgrStatG
 AHStatDV
 AKG
-AKostV 2002
+AKostV( 2002)?
 AktG
 AktGEG
 ALG
@@ -26,49 +26,49 @@ AltholzV
 AltPflAPrV
 AltPflG
 AltZertG
-AMAusbV 2004
-AMG 1976
+AMAusbV( 2004)?
+AMG( 1976)?
 AMGKostV
 AMVerkRV
 AMVV
 AMWHV
 AntarktUmwSchProtAG
-AnzV 2006
-AO 1977
-AOEG 1977
+AnzV( 2006)?
+AO( 1977)?
+AOEG( 1977)?
 AP-mDBGSV
-ApoBetrO 1987
+ApoBetrO( 1987)?
 ApoG
 ArbGG
 ArbMDFAngAusbV
 ArbMedVV
 ArbnErfG
 ArbSchG
-ArbStättV 2004
+ArbStättV( 2004)?
 ArbZG
 ARegV
-ARV 1991
+ARV( 1991)?
 ASG
 AsphAusbV
 AStG
-AsylVfG 1992
-AtAV 2009
-AtDeckV 1977
+AsylVfG( 1992)?
+AtAV( 2009)?
+AtDeckV( 1977)?
 AtG
 AtSMV
 AtStrlSV
 AtStrlSVDBest
 AtVfV
-AufenthG 2004
+AufenthG( 2004)?
 AufenthV
-AUG 2011
+AUG( 2011)?
 AugenoptAusbV
 AujeszkKrV
 AuslSchuldAbkAG
 AuslWBG
-AuslZuschlV 2010
-AUV 2012
-AVAG 2001
+AuslZuschlV( 2010)?
+AUV( 2012)?
+AVAG( 2001)?
 AVMedKfAusbV
 AVV
 AWaffV
@@ -84,37 +84,37 @@ BApO
 BAPostG
 BAPostSa
 BargeldPrüfV
-BArtSchV 2005
+BArtSchV( 2005)?
 BattG
-BaugeräteFAusbV 1997
+BaugeräteFAusbV( 1997)?
 BauMaschMeistPrV
 BauNVO
 BauPÜAnO
 BauSparkG
-BauStoffPrAusbV 2005
+BauStoffPrAusbV( 2005)?
 BauwAbdAusbV
-BauWiAusbV 1999
-BauZAusbV 2002
+BauWiAusbV( 1999)?
+BauZAusbV( 2002)?
 BBankG
 BBauG
 BBergG
 BBesG
 BBesG/BesÜGBek
-BBesG/BesÜGBek 2010
-BBesG/BesÜGBek 2011
-BBesG/BesÜGBek 2012
+BBesG/BesÜGBek( 2010)?
+BBesG/BesÜGBek( 2011)?
+BBesG/BesÜGBek( 2012)?
 BBesG/BesÜV2Bek
-BBesG/BesÜV2Bek 2008
-BBG 2009
+BBesG/BesÜV2Bek( 2008)?
+BBG( 2009)?
 BBhV
-BBiG 2005
+BBiG( 2005)?
 BBodSchG
 BBodSchV
 BBVAnpG2000Art4uaBek
 BBVAnpG98Art4uaBek
 BBVAnpG99Art4uaBek
 BDG
-BDSG 1990
+BDSG( 1990)?
 BeamtStG
 BeamtVG
 BedGgstV
@@ -124,7 +124,7 @@ BEGDV 1
 BEGDV 2
 BEGDV 3
 BEGDV 6
-BEGebV 2008
+BEGebV( 2008)?
 BelWertV
 BeratungsG
 BergMAusbV
@@ -137,17 +137,17 @@ BeschussV
 BestAusbV
 BesVNG 1
 BesVNG 2
-BesÜV2Bek 1992-03-09
-BesÜV2Bek 1993-06-02
-BesÜV2Bek 1994-01-14
-BesÜV2Bek 1996-02-21
-BesÜV2Bek 1997-06-18
-BesÜV2Bek 1998-12-03
+BesÜV2Bek( 1992-03-09)?
+BesÜV2Bek( 1993-06-02)?
+BesÜV2Bek( 1994-01-14)?
+BesÜV2Bek( 1996-02-21)?
+BesÜV2Bek( 1997-06-18)?
+BesÜV2Bek( 1998-12-03)?
 BetrAVG
 BetrVG
 BetrVGDV1WO
 BeurkG
-BewachV 1996
+BewachV( 1996)?
 BewG
 BewG§39DV 1
 BewG§39DV 2
@@ -158,36 +158,36 @@ BFStrMG
 BföV
 BGB
 BGBEG
-BGSG 1994
+BGSG( 1994)?
 BHO
 BHV1V
 BienSeuchV
-BierStG 2009
-BierStV 2010
+BierStG( 2009)?
+BierStV( 2010)?
 BImSchG
-BImSchV 1 2010
-BImSchV 10 2010
-BImSchV 12 2000
-BImSchV 13 2013
+BImSchV 1( 2010)?
+BImSchV 10( 2010)?
+BImSchV 12( 2000)?
+BImSchV 13( 2013)?
 BImSchV 16
-BImSchV 17 2013
+BImSchV 17( 2013)?
 BImSchV 18
 BImSchV 30
 BImSchV 31
 BImSchV 39
-BImSchV 4 2013
+BImSchV 4( 2013)?
 BImSchV 41
 BImSchV 9
 BinSchAusbV
 BinSchEO
 BinSchG
-BinSchKostV 2002
-BinSchPatentV 1998
+BinSchKostV( 2002)?
+BinSchPatentV( 1998)?
 BinSchPRG
-BinSchSprFunkV 2003
-BinSchStrEV 2012
-BinSchStrO 2012
-BinSchUO 2008
+BinSchSprFunkV( 2003)?
+BinSchStrEV( 2012)?
+BinSchStrO( 2012)?
+BinSchUO( 2008)?
 BinSchUO2008Anh II
 BinSchUO2008Anh III
 BinSchUO2008Anh IX
@@ -201,52 +201,52 @@ BioSt-NachV
 BITV 2.0
 BJagdG
 BKADV
-BKAG 1997
-BKatV 2013
+BKAG( 1997)?
+BKatV( 2013)?
 BKrFQV
 BKV
 BLG
-BLV 2009
-BNatSchG 2009
+BLV( 2009)?
+BNatSchG( 2009)?
 BNDG
 BNotO
 BodenlAusbV
 BodSchätzDV
-BodSchätzG 2008
-BOKraft 1975
-BootsbAusbV 2011
+BodSchätzG( 2008)?
+BOKraft( 1975)?
+BootsbAusbV( 2011)?
 BPersVG
 BPersVWO
-BPolLV 2011
+BPolLV( 2011)?
 BPolZollV
 BranntwMonG
 BRAO
-Brau/MälzAusbV 2007
+Brau/MälzAusbV( 2007)?
 BrennAusbV
-BrennO 1998
-BRGO 1966
+BrennO( 1998)?
+BRGO( 1966)?
 BrillVerfMAusbV
-BrStV 2010
+BrStV( 2010)?
 BrucelloseV
 BRüG
 BSAVfV
 BSeeSchG
-BSG 1999
+BSG( 1999)?
 BSHGebV
-BSIG 2009
-BSV 1994
-BSV 1996
-BSV 1997
-BSV 1998
-BSV 1999
-BTGO 1980
-BtMG 1981
-BtMVV 1998
+BSIG( 2009)?
+BSV( 1994)?
+BSV( 1996)?
+BSV( 1997)?
+BSV( 1998)?
+BSV( 1999)?
+BTGO( 1980)?
+BtMG( 1981)?
+BtMVV( 1998)?
 BTÄO
-BuchbAusbV 2011
+BuchbAusbV( 2011)?
 BuchBIndMstrV
-BuchhdlAusbV 2011
-ButtV 1997
+BuchhdlAusbV( 2011)?
+ButtV( 1997)?
 BVerfGG
 BVerfSchG
 BVFG
@@ -257,30 +257,30 @@ BWahlG
 BWahlGV
 BWaldG
 BWildSchV
-BWO 1985
-BüchsenmAusbV 2010
+BWO( 1985)?
+BüchsenmAusbV( 2010)?
 BühnenM/PlastAusbV
 BZRG
-BäAusbV 2004
+BäAusbV( 2004)?
 BäderFAngAusbV
 BäderMeistPrV
 BÄO
-BörsG 2007
+BörsG( 2007)?
 BörsZulV
-BöttchAusbV 2010
-ChemBioLackAusbV 2009
+BöttchAusbV( 2010)?
+ChemBioLackAusbV( 2009)?
 ChemFachAusbV
 ChemG
-ChemikAusbV 2009
-ChemIndMeistPrV 2004
+ChemikAusbV( 2009)?
+ChemIndMeistPrV( 2004)?
 ChemSanktionsV
 ChirurgMAusbV
 CWÜV
-DarlehensV 1980
+DarlehensV( 1980)?
 De-Mail-G
-DepV 2009
+DepV( 2009)?
 DestAusbV
-DEV 2020
+DEV( 2020)?
 DEÜV
 DGBankSa
 DGBankUmwG
@@ -290,19 +290,19 @@ DiamantAusbV
 DiätAss-APrV
 DiätV
 DMBilG
-DonauSchPVAnl 1993
-DPMAV 2004
-DPMAVwKostV 2006
+DonauSchPVAnl( 1993)?
+DPMAV( 2004)?
+DPMAVwKostV( 2006)?
 DrechslAusbV
 DRiG
 DrogistAusbV
-DruckerAusbV 2011
+DruckerAusbV( 2011)?
 DruckLV
 DruckverarbAusbV
 DWG
-DüMV 2012
+DüMV( 2012)?
 DüngG
-EBBAusbV 2004
+EBBAusbV( 2004)?
 EBO
 EBPV
 EBRG
@@ -310,7 +310,7 @@ EdlStFAusbV
 EdlStGrAusbV
 EdlStSchlAusbV
 EEWärmeG
-EG-FGV 2011
+EG-FGV( 2011)?
 EGInsO
 EGRechtÜblV
 EinbTestV
@@ -319,66 +319,66 @@ EinigVtrVbg
 EinsatzWVG
 EKFG
 ElekAnlAusbV
-ElekMeistPrV 2004
-ElektronAusbV 2008
+ElekMeistPrV( 2004)?
+ElektronAusbV( 2008)?
 ElektroStoffV
 EltLastV
-ELV 2004
-EmsLotsV 2003
-EMVBeitrV 2002
+ELV( 2004)?
+EmsLotsV( 2003)?
+EMVBeitrV( 2002)?
 EnergieStG
 EnergieStV
-EnEV 2007
-EnVKG 2012
-EnWG 2005
+EnEV( 2007)?
+EnVKG( 2012)?
+EnWG( 2005)?
 ErbbauV
-ErbStDV 1998
-ErbStG 1974
-ErdölBevG 2012
+ErbStDV( 1998)?
+ErbStG( 1974)?
+ErdölBevG( 2012)?
 ErgThAPrV
 ErsDiG
 ErstrG
 ESBO
-ESO 1959
-EStDV 1955
+ESO( 1959)?
+EStDV( 1955)?
 EStG
 EUBeitrG
 EuRAG
 EuWG
-EuWO 1988
+EuWO( 1988)?
 EVO
-EZulV 1976
-FahrlAusbO 2012
+EZulV( 1976)?
+FahrlAusbO( 2012)?
 FahrlG
-FahrlGDV 2012
-FahrlPrüfO 2012
+FahrlGDV( 2012)?
+FahrlPrüfO( 2012)?
 FahrmAusbV
-FahrschAusbO 2012
+FahrschAusbO( 2012)?
 FahrzIAAusbV
 FamFG
 FamGKG
-FBeitrV 2000
+FBeitrV( 2000)?
 FeinOAusbV
 FeinwAusbV
 FELEG
-FertigPackV 1981
-FeV 2010
+FertigPackV( 1981)?
+FeV( 2010)?
 FGNV
 FGO
-FinAusglG 2005
+FinAusglG( 2005)?
 FinDAG
 FinDAGKostV
 FinDPrV
 FinVermV
-FischRDV 1998
-FischSeuchV 2008
+FischRDV( 1998)?
+FischSeuchV( 2008)?
 FKrFBAusbV
 FlaggRG
 FlechtwAusbV
-FleiAusbV 2005
+FleiAusbV( 2005)?
 FloristAusbV
 FlRV
-FlugfunkV 2008
+FlugfunkV( 2008)?
 FluLärmAhlhV
 FluLärmBerl-TegelV BE
 FluLärmBüchV
@@ -387,7 +387,7 @@ FluLärmHohnV
 FluLärmHopstV
 FluLärmJeverV
 FluLärmLechfV
-FluLärmMüV 1996
+FluLärmMüV( 1996)?
 FluLärmNordholzV
 FluLärmNordhV
 FluLärmRamstV
@@ -396,85 +396,78 @@ FlurbG
 FlUUG
 FMontAusbV
 FMStFG
-ForstWiAusbV 1998
-FotoAusbV 2009
+ForstWiAusbV( 1998)?
+FotoAusbV( 2009)?
 FotoMedFachAusbV
 FoVG
 FoVZV
 FPersV
 FPStatG
 FRG
-FriseurAusbV 2008
+FriseurAusbV( 2008)?
 FrSaftAusbV
-FrSaftV 2004
+FrSaftV( 2004)?
 FSaatHerkV
 FSBeitrV
 FSPersAV
 FStrAusbauG
 FStrG
-FuttMV 1981
-FVG 1971
+FuttMV( 1981)?
+FVG( 1971)?
 FzgLackAusbV
 FzTV
-FZV 2011
+FZV( 2011)?
 GAD
 GarBBAnO
 GasLastV
 GasNEV
-GasNZV 2010
-GastgewAusbV 1998
+GasNZV( 2010)?
+GastgewAusbV( 1998)?
 GBO
 GBVfg
 GCP-V
 GDtWahlVDVtr
-GebReinigAusbV 1999
+GebReinigAusbV( 1999)?
 GebrMG
 GeflPestSchV
-GefStoffV 2010
+GefStoffV( 2010)?
 GenDG
 GenG
 GenRegV
 GenTG
 GenTSV
 GeoITAusbV
-GerüstbAusbV 2000
+GerüstbAusbV( 2000)?
 GesBergV
-GeschmMG 2004
+GeschmMG( 2004)?
 GetrAuVÜV
 GewO
-GewStDV 1955
+GewStDV( 1955)?
 GewStG
 GGArt29Abs6G
-GGAV 2002
+GGAV( 2002)?
 GGKontrollV
-GGKostV 2013
+GGKostV( 2013)?
 GGVSEB
-GKG 2004
+GKG( 2004)?
 GlasappAusbV
 GlasblAusbV
 GlasmAusbV
 GlasVAusbV
-GlAusbV 2001
+GlAusbV( 2001)?
 GmbHG
 GntDAIVAPrV
 GoldSchmAusbV
 GOT
-GOZ 1987
-GOÄ 1982
+GOZ( 1987)?
+GOÄ( 1982)?
 GrdstVG
-GrEStG 1983
+GrEStG( 1983)?
 GRG
-GrHdlKfmAusbV 2006
-GrStG 1973
+GrHdlKfmAusbV( 2006)?
+GrStG( 1973)?
 Grundgesetz
-Grundgesetz
-Grundgesetz
-Grundgesetz
-Grundgesetz
-Grundgesetz
-Grundgesetz
-Grundgesetz
-GrwV 2010
+GrwV( 2010)?
 GSG
 GtDBWVAPrV
 GtDWSVVDV
@@ -484,8 +477,8 @@ GVIDVDV
 GvKostG
 GWB
 GWDAPrV
-GüKG 1998
-GüKGrKabotageV 2012
+GüKG( 1998)?
+GüKGrKabotageV( 2012)?
 GärtnAusbV
 HafenlogAusbV
 HafenSchAusbV
@@ -493,7 +486,7 @@ HAG
 HaldeRlAnO
 HdlRegVfg
 HebAPrO
-HebG 1985
+HebG( 1985)?
 HeimG
 HeimMindBauV
 HeimMitwirkungsV
@@ -503,10 +496,10 @@ HGBEG
 HGrG
 HkNDV
 HolzBauSchAusbV
-HolzbearbMechAusbV 2004-07
+HolzbearbMechAusbV( 2004-07)?
 HolzbhAusbV
 HolzbInstrmMAusbV
-HolzSpielzMAusbV 1996
+HolzSpielzMAusbV( 1996)?
 HotelMeistPrV
 HRegGebV
 HRG
@@ -514,23 +507,23 @@ HStruktG
 HStruktG 2
 HtDBWVAPrV
 HufBeschlV
-HwirtAusbV 1999
+HwirtAusbV( 1999)?
 HwO
 HwWahlO
 HüSalmoV
 HZInstrmMAusbV
-HZvG 2002
+HZvG( 2002)?
 HöBetrV
 IfSG
 IGV-DG
 ImmobKfmAusbV
 ImmoWertV
-IndElAusbV 2007
+IndElAusbV( 2007)?
 IndElekAusbV
-IndKfmAusbV 2002
+IndKfmAusbV( 2002)?
 IndMechaAusbV
-IndMetAusbV 2007
-IndMetMeistV 1997
+IndMetAusbV( 2007)?
+IndMetMeistV( 1997)?
 InfElekAusbV
 InhKontrollV
 InsO
@@ -538,7 +531,7 @@ IntFamRVG
 InvestAusbV
 InvStG
 IRG
-ISAusbV 1997
+ISAusbV( 1997)?
 IStGHG
 IT-FortbV
 ITFG
@@ -548,13 +541,13 @@ JFAngAusbV
 JGG
 JuSchG
 JVEG
-KaffeeStG 2009
-KaffeeStV 2010
-KapMuG 2012
-KartRingfV 2001
+KaffeeStG( 2009)?
+KaffeeStV( 2010)?
+KapMuG( 2012)?
+KartRingfV( 2001)?
 KEPFachAusbV
 KEPKfmAusbV
-KerAusbV 2009
+KerAusbV( 2009)?
 KerIndAusbV
 KflDiAusbV
 KfSachvG
@@ -565,8 +558,8 @@ KHG
 KJPsychTh-APrV
 KlauenPflPrV
 KlimaBergV
-KochAusbV 1998
-KondAusbV 2003
+KochAusbV( 1998)?
+KondAusbV( 2003)?
 KonstPrV
 KonsVerFRAV
 KosmAusbV
@@ -574,35 +567,35 @@ KOVErstV
 KraftStG
 KraftstoffLBV
 KredWG
-KrPflAPrV 2004
-KrPflG 2004
+KrPflAPrV( 2004)?
+KrPflG( 2004)?
 KrW/AbfMeistPrV
 KrWaffKontrG
 KrWG
 KSpG
-KStG 1977
-KStoffVerfMAusbV 2012
+KStG( 1977)?
+KStoffVerfMAusbV( 2012)?
 KSVG
 KupfSchmAusbV
-KVLG 1989
+KVLG( 1989)?
 KVMeistPrV
 KÜO
 KürschAusbV
 KälteMechaAusbV
 KäseV
 LAG
-LandBauMTAusbV 2008
+LandBauMTAusbV( 2008)?
 LAnpG
 LAP-gbautDV
 LAP-gDBNDV
 LAP-gDFm/EloAufklBundV
 LAP-gDVerfSchV
-LAP-gehDAAV 2004
-LAP-gntDBWVV 2005
-LAP-hADV 2004
+LAP-gehDAAV( 2004)?
+LAP-gntDBWVV( 2005)?
+LAP-hADV( 2004)?
 LAP-hDBiblV
 LAP-htVerwDV
-LAP-mDAAV 2004
+LAP-mDAAV( 2004)?
 LAP-mDBNDV
 LAP-mDFm/EloAufklBundV
 LAP-mDVerfSchV
@@ -620,13 +613,13 @@ LeuchtrAusbV
 LFGB
 LKWÜberlStVAusnV
 LMEV
-LMRStV 2006
+LMRStV( 2006)?
 LogAPrO
 LogMstrV
 LTV
 LuftBO
-LuftBODV 2 2009
-LuftBODV 3 2009
+LuftBODV 2( 2009)?
+LuftBODV 3( 2009)?
 LuftFzgG
 LuftKostV
 LuftPersV
@@ -636,14 +629,14 @@ LuftSiG
 LuftVG
 LuftVStG
 LuftVZO
-LwAusbV 1995
+LwAusbV( 1995)?
 LWLogAusbV
 LwVfG
 LärmVibrationsArbSchV
-MaATElektronAusbV 2008
+MaATElektronAusbV( 2008)?
 MalerLackAusbV
 MarkenG
-MarkenV 2004
+MarkenV( 2004)?
 MarketGestAusbV
 MarketKfmAusbV
 MarkschBergV
@@ -657,11 +650,11 @@ MechatronikerAusbV
 MedFAngAusbV
 MedienBTMstrPrV
 MedienFortbV
-MediengestAusbV 2006
+MediengestAusbV( 2006)?
 MedienKfmAusbV
 MedInfoFAngAusbV
 Met/GlockAusbV
-MetallbAusbV 2008
+MetallbAusbV( 2008)?
 MetallbInstrmMAusbV
 MgVG
 MikrotAusbV
@@ -669,32 +662,32 @@ MilchQuotV
 MilchTAusbV
 MilchV
 Min/TafelWV
-MinNettoV 2004
-MinNettoV 2008
+MinNettoV( 2004)?
+MinNettoV( 2008)?
 MitbestG
-MitbestGWO 1 2002
-MitbestGWO 2 2002
-MitbestGWO 3 2002
+MitbestGWO 1( 2002)?
+MitbestGWO 2( 2002)?
+MitbestGWO 3( 2002)?
 MitÜbermitV
-MKSeuchV 2005
+MKSeuchV( 2005)?
 MKUServAusbV
 MntDAIVAPrV
 ModellBTechAusbV
 ModistAusbV
 MOG
 MontanMitbestGErgG
-MontanMitbestGErgGWO 2005
-MoselSchPEV 1997
-MoselSchPV 1997
+MontanMitbestGErgGWO( 2005)?
+MoselSchPEV( 1997)?
+MoselSchPV( 1997)?
 MPAFHBundV
 MPBetreibV
 MPG
-MSchnAusbV 2004
+MSchnAusbV( 2004)?
 MTA-APrV
 MuSchG
 MusikfachhAusbV
 NABEG
-NachwV 2007
+NachwV( 2007)?
 NATOTrStatVtrG
 NatPDrömlV
 NatPMSchweizV
@@ -702,11 +695,11 @@ NatPMüritzV
 NatSGmElbeV
 NatSGSchorfhV
 NatSGSpreewV
-NaturwMechAusbV 2003
+NaturwMechAusbV( 2003)?
 NAV
 NDAV
 NeuGlV
-NMV 1970
+NMV( 1970)?
 NOKBefAbgV
 NPBefVMVK
 NWRG
@@ -716,41 +709,41 @@ OfenbAusbV
 OrgAusbV
 OrthoptAPrV
 OrthV
-OWiG 1968
+OWiG( 1968)?
 PackmAusbV
-PapIndMeistPrV 2005
+PapIndMeistPrV( 2005)?
 PapKuVerarbIndMeistPrV
-PapTechAusbV 2010
-ParkettlAusbV 2002
+PapTechAusbV( 2010)?
+ParkettlAusbV( 2002)?
 PartG
-PassV 2007
+PassV( 2007)?
 PatAnwO
 PatG
 PatKostG
 PatV
 PAuswG
 PAuswV
-PaßG 1986
+PaßG( 1986)?
 PBefAusglV
 PBefG
 PBV
 PBZugV
-PEhrlInstKostV 1996
+PEhrlInstKostV( 1996)?
 PelzVAusbV
 PersDienstLAusbV
 PfandBG
-PflBeschauV 1989
+PflBeschauV( 1989)?
 PflegeVG
-PflKartV 1986
-PflSchAnwV 1992
-PflSchG 2012
-PfWirtAusbV 2010
-PfändfreiGrBek 2005
-PfändfreiGrBek 2011
-PfändfreiGrBek 2013
-PharmAusbV 2009
+PflKartV( 1986)?
+PflSchAnwV( 1992)?
+PflSchG( 2012)?
+PfWirtAusbV( 2010)?
+PfändfreiGrBek( 2005)?
+PfändfreiGrBek( 2011)?
+PfändfreiGrBek( 2013)?
+PharmAusbV( 2009)?
 PharmIndMstrFortbV
-PharmKfmAusbV 2012
+PharmKfmAusbV( 2012)?
 PharmRefPrV
 PhysLabAusbV
 PhysTh-APrV
@@ -758,16 +751,16 @@ PKDBSa
 Pkw-EnVKV
 PMElekPrV
 PodAPrV
-PolierPrV 2012
-PostG 1998
-PostLV 2012
+PolierPrV( 2012)?
+PostG( 1998)?
+PostLV( 2012)?
 PostPersRG
 PostRDV
 PreisLS
 PrfgZAUTV
 ProdGewStatG
 ProdMechTextAusbV
-ProdSG 2011
+ProdSG( 2011)?
 ProdTechAusbV
 ProMechG
 PStG
@@ -778,27 +771,27 @@ PTA-APrV
 PTBAKostO
 RAG 20
 RAG 21
-RaumAAusbV 2004
+RaumAAusbV( 2004)?
 RDG
-RebPflV 1986
+RebPflV( 1986)?
 RechKredV
 RechPensV
 RechVersV
 RechZahlV
 RegG
-ReiseKfmAusbV 2011
+ReiseKfmAusbV( 2011)?
 RennwLottGABest
 RestMeistPrV
-RevjAusbV 2010
+RevjAusbV( 2010)?
 RheinLotsO
 RheinSchPersV
-RheinSchPEV 1994
-RheinSchPV 1994
-RHmV 1994
+RheinSchPEV( 1994)?
+RheinSchPV( 1994)?
+RHmV( 1994)?
 RindTbV
-ROG 2008
+ROG( 2008)?
 RohrMeistPrV
-RPflG 1969
+RPflG( 1969)?
 RSAV
 RStruktFG
 RTrAbwG
@@ -807,24 +800,24 @@ RVermG
 RVG
 RVO
 RÜG
-RöV 1987
-SaatArtVerzV 1985
+RöV( 1987)?
+SaatArtVerzV( 1985)?
 SaatV
-SaatVerkG 1985
-SaAusbV 2005
+SaatVerkG( 1985)?
+SaAusbV( 2005)?
 SachenRBerG
 SamEnV
 SatDSiG
 SCEAG
 SCEBG
-SchaumwZwStG 2009
-SchaumwZwStV 2010
+SchaumwZwStG( 2009)?
+SchaumwZwStV( 2010)?
 ScheckG
-SchfAusbV 2012
+SchfAusbV( 2012)?
 SchfHwG
 SchHaltHygV
 SchiedsG
-SchKfmAusbV 2004
+SchKfmAusbV( 2004)?
 SchKiSpV
 SchKiSpVDBest 1
 SchleusV
@@ -834,17 +827,17 @@ SchRegDV
 SchRegO
 SchRG
 SchSG
-SchSiAusbV 2008
+SchSiAusbV( 2008)?
 SchSiMeistPrV
 SchSiServAusbV
-SchSV 1998
-SchuhfIndMeistPrV 2013
+SchSV( 1998)?
+SchuhfIndMeistPrV( 2013)?
 SchuldRAnpG
 SchuTSEV
-SchwarzArbG 2004
-SchwbAV 1988
+SchwarzArbG( 2004)?
+SchwbAV( 1988)?
 SchwbWO
-SchwPestV 1988
+SchwPestV( 1988)?
 SchädlBekAusbV
 SDLWindV
 SEAG
@@ -852,16 +845,16 @@ SEBG
 SeeFischG
 SeefiV
 SeelotG
-SeemAmtsBek 1982
-SeeRVertO 1986
-SeeSchStrO 1971
+SeemAmtsBek( 1982)?
+SeeRVertO( 1986)?
+SeeSchStrO( 1971)?
 SeeSpbootV
-SeeStrO 1972
+SeeStrO( 1972)?
 SegelmAusbV
-SeilAusbV 2008
-SEIVerfMAusbV 2004
+SeilAusbV( 2008)?
+SEIVerfMAusbV( 2004)?
 ServicefahrerAusbV
-SG
+SG[GB]?
 SGB 1
 SGB 10
 SGB 11
@@ -874,105 +867,104 @@ SGB 6
 SGB 7
 SGB 8
 SGB 9
-SGG
-SiebdrAusbV 2011
+SiebdrAusbV( 2011)?
 SiSchmAusbV
-SLV 2002
+SLV( 2002)?
 SoftwareentwAusbV
-SortSchG 1985
+SortSchG( 1985)?
 SozhiDAV
-SpedKfmAusbV 2004
+SpedKfmAusbV( 2004)?
 SpielV
 SpielzHerstAusbV
 SpiritV
 Sport/FitnessAusbV
-SportbootVermV-Bin2000
+SportbootVermV(-Bin2000)?
 SportfAusbV
 SportSeeSchV
 SprAuG
-SprengG 1976
+SprengG( 1976)?
 SprengV 1
 SprengV 2
 SPV
-StBAPO 1977
+StBAPO( 1977)?
 StBDV
 StBerG
 StBGebV
-SteinAusbV 2003
+SteinAusbV( 2003)?
 StFachAngAusbV
 StGB
 StGBEG
-StGebO 2011
+StGebO( 2011)?
 StPO
 StrabBlPV
-StrabBO 1987
-StrlSchV 2001
+StrabBO( 1987)?
+StrlSchV( 2001)?
 StromNEV
 StromNZV
 StromStV
 StRSaarEG
-StrWAusbV 2002
+StrWAusbV( 2002)?
 StUG
 StV/WasAusbV
 StVG
-StVO 2013
+StVO( 2013)?
 StVollzG
-StVZO 2012
+StVZO( 2012)?
 SUG
-SVFAngAusbV 1997
+SVFAngAusbV( 1997)?
 SVG
 SVHV
 SVSaarAnglG
-SVWO 1997
+SVWO( 1997)?
 SÜG
-SystElektronAusbV 2008
+SystElektronAusbV( 2008)?
 SzVersFachwPrV
-TabStG 2009
-TabStV 2010
+TabStG( 2009)?
+TabStV( 2010)?
 TAppV
-TauchPrV 2000
+TauchPrV( 2000)?
 TBetrWPrV
 TechFachwPrV
-TEHG 2011
+TEHG( 2011)?
 TEIV
-TexRAusbV 2002
+TexRAusbV( 2002)?
 Text/ProdVeredlAusbV
 TextilGestAusbV
-TextilIndMeistPrV 2006
+TextilIndMeistPrV( 2006)?
 TextilPrAusbV
-TextLabAusbV 2003
+TextLabAusbV( 2003)?
 TFG
 TfV
 ThermMAusbV
 THW-AbrV
 Tier-LMHV
-TierImpfStKostV 2010
-TierImpfStV 2006
+TierImpfStKostV( 2010)?
+TierImpfStV( 2006)?
 TiermedFAngAusbV
 TierNebV
-TierpflAusbV 2003
-TierpflMstrV 2009
+TierpflAusbV( 2003)?
+TierpflMstrV( 2009)?
 TierSchG
-TierSchlV 2013
+TierSchlV( 2013)?
 TierSchNutztV
-TierSchTrV 2009
+TierSchTrV( 2009)?
 TierSeuchErEinfV
 TierSeuchSchBMV
-TierZG 2006
-TischlAusbV 2006
-TKG 2004
-TKonfAusbV 2010
-TKrMeldpflV 1983
-TKÜV 2005
+TierZG( 2006)?
+TischlAusbV( 2006)?
+TKG( 2004)?
+TKonfAusbV( 2010)?
+TKrMeldpflV( 1983)?
+TKÜV( 2005)?
 TNV
 TourKfmAusbV
 TPDesign/TSysPlAusbV
 TPG
-TrinkwV 2001
+TrinkwV( 2001)?
 TrZollG
 TrZollV
-TspV 2013
-TWirtAusbV 2005
+TspV( 2013)?
+TWirtAusbV( 2005)?
 TÜPrKostO1992GebVAnpV
 TÜPrKostO1992GebVAnpV 2
 TÜPrKostO1992GebVUmstV
@@ -981,75 +973,75 @@ UAG
 UAGZVV
 UErgG
 UErgGDV 2
-UhrmAusbV 2001
+UhrmAusbV( 2001)?
 UKlaG
 UmstBauSparkV
 UmstG
 UmstGeldInstV
 UmwAusbV
 UmweltHG
-UmwG 1995
-UmwStG 1995
-UmwStG 2006
+UmwG( 1995)?
+UmwStG( 1995)?
+UmwStG( 2006)?
 URaG
 UrhG
-UStatG 2005
-UStDV 1980
-UStG 1980
+UStatG( 2005)?
+UStDV( 1980)?
+UStG( 1980)?
 UVPG
 UVSV
-UWG 2004
+UWG( 2004)?
 UZwG
 VeranstFachwPrV
 VeranstTechMeistPrV
 VerfGlasAusbV
 VergoldAusbV
 VerifZusAusfG
-VerkKfmAusbV 1999
+VerkKfmAusbV( 1999)?
 VerkSiG
 VerkStatG
 VermAnlG
 VermG
-VerpackV 1998
+VerpackV( 1998)?
 VersammlG
 VersatzV
 VersAusglG
 VerschG
-VersFachwPrV 2008
+VersFachwPrV( 2008)?
 VersFinKfAusbV
 VersMedV
 VersRMAbschR
 VersVermV
-ViehVerkV 2007
+ViehVerkV( 2007)?
 VRV
 VSchDG
 VSchwKrSchV
 VServiceAusbV
-VStG 1974
+VStG( 1974)?
 VSVgV
-VulkAusbV 2004
-VVG 2008
+VulkAusbV( 2004)?
+VVG( 2008)?
 VWDG-DV
-VwFAngAusbV 1999
+VwFAngAusbV( 1999)?
 VwGO
 VwVfG
-Wabau-AusbV 2004
-WaffG 2002
+Wabau-AusbV( 2004)?
+WaffG( 2002)?
 WaffV 4
 WasserMeistPrV
 WasSiG
 WaStrG
-WaStrSchlBetrZV 2013
+WaStrSchlBetrZV( 2013)?
 WaStrÜbgVtr
-WDO 2002
+WDO( 2002)?
 WehrPflG
-WeinG 1994
-WeinV 1995
-WeinÜV 1995
-Weser/JadeLotsV 2003
+WeinG( 1994)?
+WeinV( 1995)?
+WeinÜV( 1995)?
+Weser/JadeLotsV( 2003)?
 WG
-WHG 2009
-WinzerAusbV 1997
+WHG( 2009)?
+WinzerAusbV( 1997)?
 WiPrO
 WiPrPrüfV
 WMVO
@@ -1060,7 +1052,7 @@ WoEigG
 WoFG
 WoGG
 WoGV
-WOS 2002
+WOS( 2002)?
 WOSprAuG
 WpAIV
 WPapG
@@ -1070,7 +1062,7 @@ WpPG
 WpÜG
 WSG
 WStrG
-WSVSeeKostV 2004
+WSVSeeKostV( 2004)?
 WVG
 WWSUG
 WWSUVtr
@@ -1079,7 +1071,7 @@ ZAG
 ZAGMonAwV
 ZahlPrüfbV
 ZahnmedAusbV
-ZensG 2011
+ZensG( 2011)?
 ZensTeG
 ZFdG
 ZHG
@@ -1095,19 +1087,19 @@ ZPO
 ZPOEG
 ZSG
 ZTechAusbV
-ZuG 2007
-ZuG 2012
+ZuG( 2007)?
+ZuG( 2012)?
 ZustAOBeih
 ZustLG
-ZuV 2007
-ZuV 2012
-ZuV 2020
-ZVerkV 1998
+ZuV( 2007)?
+ZuV( 2012)?
+ZuV( 2020)?
+ZVerkV( 1998)?
 ZVG
 ZweiradFortbV
-ZZulV 1998
+ZZulV( 1998)?
 ZÄPrO
-ÄApprO 2002
+ÄApprO( 2002)?
 ÄndSchnAusbV
 ÖLGKontrollStZulV
 GG
@@ -1123,3 +1115,5 @@ GlüStV
 BaylfSMV
 EG
 FreizügG
+KapVO( 2017)?
+LVV
