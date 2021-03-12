@@ -190,10 +190,10 @@ A ReferenceObjectException is raised if unsuccessful.
 The input to this function is a string of the kind you would get if you take a
 sample of the OpenLegalData dataset and then select sample["content"].
 
-This function returns two things. The first thing is the string from
+This function returns two things. The first being the string from
 sample["content"] without any HTML or margin numbers (raw text of the verdict)
-and the second thing is a python dictionary where the keys are the margin
-numbers and the values are the index within the raw text of the verdict where
+and the second being a python dictionary where the keys are the margin
+numbers and the values are the indeces within the raw text of the verdict where
 the margin number would be.
 
 In case of failure it instead returns a string with an error message and an
@@ -215,7 +215,7 @@ t[1] is the index within the input string where the Ref starts.
 
 ### create_custom_simple
 
-The input into this function is a python dictionary with keys that correspond
+The input for this function is a python dictionary with keys that correspond
 to attributes from the SimpleLawRef class. You can omit any key except for
 "paragraph" and "vorschrift".
 
@@ -251,7 +251,7 @@ use regular expression syntax in the line you are adding to the file. So in this
 case you would add "SG[GB]?" instead of adding three lines with SG, SGG and SGB.
 If you want to add a year to the law then you have to do it in regular
 expression syntax as well. This means instead of adding "SchSV 1998" you have to
-add "SchSV( 1998)?"
+add "SchSV( 1998)?".
 
 ## Example
 
