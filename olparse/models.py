@@ -1,5 +1,5 @@
 import json
-import functions as fs
+import olparse.functions as fs
 
 
 class ReferenceObjectException(Exception):

@@ -1,6 +1,6 @@
 import re
 from bs4 import BeautifulSoup
-import models as ms
+import olparse.models as ms
 
 
 ROMAN_ARABIC_MAP = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
@@ -355,7 +355,7 @@ def parse_simples(content):
             continue
 
         try:
-            result.append((ms.SimpleLawRef(x.group().strip()), x.start()))
+            result.append((ms.SimpleLawRef(x.group().strip()), x.start(), x.end()))
 
         except ms.ReferenceObjectException:
             continue
@@ -370,7 +370,7 @@ def parse_multis(content):
             continue
 
         try:
-            result.append((ms.MultiLawRef(x.group().strip()), x.start()))
+            result.append((ms.MultiLawRef(x.group().strip()), x.start(), x.end()))
 
         except ms.ReferenceObjectException:
             continue
@@ -382,7 +382,7 @@ def parse_ivms(content):
     result = list()
     for x in P_ivm.finditer(content):
         try:
-            result.append((ms.IVMLawRef(x.group().strip()), x.start()))
+            result.append((ms.IVMLawRef(x.group().strip()), x.start(), x.end()))
 
         except ms.ReferenceObjectException:
             continue
@@ -394,7 +394,7 @@ def parse_files(content):
     result = list()
     for x in P_file.finditer(content):
         try:
-            result.append((ms.FileRef(x.group().strip()), x.start()))
+            result.append((ms.FileRef(x.group().strip()), x.start(), x.end()))
 
         except ms.ReferenceObjectException:
             continue
