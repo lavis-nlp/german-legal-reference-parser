@@ -1,21 +1,24 @@
-from typing import List, Union
+from __future__ import annotations
+from abc import ABC, abstractmethod
+from typing import Tuple, Union, List
 from dataclasses import dataclass
 from functools import lru_cache
 import json
 import olparse.functions as fs
 
 
-class ReferenceObjectException(Exception):
+class ReferenceException(Exception):
     pass
 
 
-class ReferenceObject:
+class Reference(ABC):
+    @abstractmethod
+    def unpack(self) -> List[Reference]:
+        pass
+
+
+class LawRef(Reference, ABC):
     pass
-
-
-class LawRef(ReferenceObject):
-    pass
-
 
 @dataclass(frozen=True)
 class SimpleLawRef(LawRef):
@@ -37,6 +40,9 @@ class SimpleLawRef(LawRef):
             satz=fs.get_satz_from_simple(refstring),
             nr=fs.get_nr_from_simple(refstring),
         )
+
+    def unpack(self) -> List[SimpleLawRef]:
+        return [self]
 
     # def __hash__(self):
     #     return hash(self.vorschrift + self.buch + self.paragraph + self.abs + self.satz + self.nr)
@@ -69,11 +75,14 @@ class SimpleLawRef(LawRef):
 
 @dataclass(frozen=True)
 class MultiLawRef(LawRef):
-    lawrefs: List[SimpleLawRef]
+    lawrefs: Tuple[SimpleLawRef]
 
     @classmethod
     def from_refstring(cls, refstring):
-        return cls(fs.get_lawrefs_from_multi(refstring))
+        return cls(tuple(fs.get_lawrefs_from_multi(refstring)))
+
+    def unpack(self) -> List[SimpleLawRef]:
+        return list(self.lawrefs)
 
     # def __hash__(self):
     #     return sum([hash(x) for x in self.lawrefs])
@@ -102,6 +111,9 @@ class IVMLawRef(LawRef):
             left=fs.get_left_from_ivm(refstring), right=fs.get_right_from_ivm(refstring)
         )
 
+    def unpack(self) -> List[SimpleLawRef]:
+        return self.left.unpack() + self.right.unpack()
+
     # def __hash__(self):
     #     return sum([hash(self.left), hash(self.right)])
     #
@@ -116,7 +128,7 @@ class IVMLawRef(LawRef):
 
 
 @dataclass(frozen=True)
-class FileRef(ReferenceObject):
+class FileRef(Reference):
     n_kammer: str
     kammer: str
     nr: str
@@ -132,6 +144,9 @@ class FileRef(ReferenceObject):
             jahr=fs.get_jahr_from_fileref(refstring),
         )
 
+    def unpack(self) -> List[FileRef]:
+        return [self]
+
     # def __hash__(self):
     #     return hash(str(self.n_kammer) + self.kammer + str(self.nr) + str(self.jahr))
     #
@@ -142,7 +157,7 @@ class FileRef(ReferenceObject):
     #     return hash(self) == hash(other)
 
     def __str__(self):
-        return "- %s %s %s/%s -" % (self.n_kammer, self.kammer, self.nr, self.jahr)
+        return "%s %s %s/%s" % (self.n_kammer, self.kammer, self.nr, self.jahr)
 
 @dataclass()
 class Verdict:

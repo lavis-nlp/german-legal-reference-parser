@@ -87,7 +87,7 @@ def get_vorschrift_from_simple(s):
         return result[-1]
 
     except Exception:
-        raise ms.ReferenceObjectException()
+        raise ms.ReferenceException()
 
 
 def get_buch_from_simple(s):
@@ -99,12 +99,12 @@ def get_buch_from_simple(s):
         return ""
 
     except Exception:
-        raise ms.ReferenceObjectException()
+        raise ms.ReferenceException()
 
 
 def get_paragraph_from_simple(s):
     if re.search(r"f[.]|,", s) or s.count("-") != s.split(" ")[-1].count("-"):
-        raise ms.ReferenceObjectException()
+        raise ms.ReferenceException()
 
     try:
         result = s.split(" ")
@@ -117,7 +117,7 @@ def get_paragraph_from_simple(s):
         return result[1]
 
     except Exception:
-        raise ms.ReferenceObjectException()
+        raise ms.ReferenceException()
 
 
 def get_abs_from_simple(s):
@@ -141,7 +141,7 @@ def get_abs_from_simple(s):
             return ""
 
         except Exception:
-            raise ms.ReferenceObjectException()
+            raise ms.ReferenceException()
 
 
 def get_satz_from_simple(s):
@@ -167,7 +167,7 @@ def get_satz_from_simple(s):
             return ""
 
         except Exception:
-            raise ms.ReferenceObjectException()
+            raise ms.ReferenceException()
 
 
 def get_nr_from_simple(s):
@@ -205,12 +205,12 @@ def get_lawrefs_from_multi(s):
                 pass
 
         if result == list():
-            raise ms.ReferenceObjectException()
+            raise ms.ReferenceException()
 
         return result
 
     except Exception:
-        raise ms.ReferenceObjectException()
+        raise ms.ReferenceException()
 
 
 def get_left_from_ivm(s):
@@ -231,10 +231,10 @@ def get_left_from_ivm(s):
         if is_multi(result):
             return ms.MultiLawRef.from_refstring(result)
 
-        raise ms.ReferenceObjectException()
+        raise ms.ReferenceException()
 
     except Exception:
-        raise ms.ReferenceObjectException()
+        raise ms.ReferenceException()
 
 
 def get_right_from_ivm(s):
@@ -246,19 +246,19 @@ def get_right_from_ivm(s):
         if is_multi(result):
             return ms.MultiLawRef.from_refstring(result)
 
-        raise ms.ReferenceObjectException()
+        raise ms.ReferenceException()
 
     except Exception:
-        raise ms.ReferenceObjectException()
+        raise ms.ReferenceException()
 
 
 def get_n_kammer_from_fileref(s):
     if re.search(r"bis|und", s):
-        raise ms.ReferenceObjectException()
+        raise ms.ReferenceException()
 
     result = s.split(" ")
     if len(result) != 3:
-        raise ms.ReferenceObjectException()
+        raise ms.ReferenceException()
 
     return result[0]
 
@@ -266,7 +266,7 @@ def get_n_kammer_from_fileref(s):
 def get_kammer_from_fileref(s):
     result = s.split(" ")
     if len(result) != 3:
-        raise ms.ReferenceObjectException()
+        raise ms.ReferenceException()
 
     return result[1]
 
@@ -274,11 +274,11 @@ def get_kammer_from_fileref(s):
 def get_nr_from_fileref(s):
     result = s.split(" ")
     if len(result) != 3:
-        raise ms.ReferenceObjectException()
+        raise ms.ReferenceException()
 
     if s.count("/") != 1:
         if s.count(".") != 1:
-            raise ms.ReferenceObjectException()
+            raise ms.ReferenceException()
 
         return result[2].split(".")[0]
 
@@ -288,11 +288,11 @@ def get_nr_from_fileref(s):
 def get_jahr_from_fileref(s):
     result = s.split(" ")
     if len(result) != 3:
-        raise ms.ReferenceObjectException()
+        raise ms.ReferenceException()
 
     if s.count("/") != 1:
         if s.count(".") != 1:
-            raise ms.ReferenceObjectException()
+            raise ms.ReferenceException()
 
         return result[2].split(".")[1]
 
@@ -380,7 +380,7 @@ def parse_simples(content):
                 (ms.SimpleLawRef.from_refstring(x.group().strip()), x.start(), x.end())
             )
 
-        except ms.ReferenceObjectException:
+        except ms.ReferenceException:
             continue
 
     return result
@@ -397,7 +397,7 @@ def parse_multis(content):
                 (ms.MultiLawRef.from_refstring(x.group().strip()), x.start(), x.end())
             )
 
-        except ms.ReferenceObjectException:
+        except ms.ReferenceException:
             continue
 
     return result
@@ -411,7 +411,7 @@ def parse_ivms(content):
                 (ms.IVMLawRef.from_refstring(x.group().strip()), x.start(), x.end())
             )
 
-        except ms.ReferenceObjectException:
+        except ms.ReferenceException:
             continue
 
     return result
@@ -425,7 +425,7 @@ def parse_files(content):
                 (ms.FileRef.from_refstring(x.group().strip()), x.start(), x.end())
             )
 
-        except ms.ReferenceObjectException:
+        except ms.ReferenceException:
             continue
 
     return result
@@ -461,4 +461,4 @@ def create_custom_simple(dic):
         return ms.SimpleLawRef.from_refstring(result)
 
     except Exception:
-        raise ms.ReferenceObjectException()
+        raise ms.ReferenceException()
