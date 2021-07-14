@@ -1,37 +1,11 @@
 import itertools
 import re
 from bs4 import BeautifulSoup
-import olparse.models as ms
 
+import olparse.models as ms
+import olparse.patterns as P
 
 ROMAN_ARABIC_MAP = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
-LAWS_SET = set()
-try:
-    LAWS_SET.update([x.strip() for x in open("laws.txt", "r").readlines()])
-
-except Exception:
-    print("laws.txt file is missing")
-    exit()
-
-LAWS_STRING = "|".join(LAWS_SET)
-P_absatzRechts = re.compile('<span [^>]*class="absatzRechts">')
-P_rd = re.compile('<a [^>]*name="rd_[\d]+">')
-P_nr = re.compile('(<rd [^>]*nr="[\d]+"/>)')
-P_point = re.compile('<p [^>]*id="point[\d]+">')
-P_simple = re.compile(
-    r"([ ]?§ |[ ]?Art[.] |[ ]?Artikel ).*?((\d|\w)+/)*(%s|[gG]esetz[-\w]*|[oO]rdnung[-\w]*)(/(\d|\w)+)*( [IVXLCDM]*)?"
-    % LAWS_STRING
-)
-P_multi = re.compile(
-    r"([ ]?§§ ).*?((\d|\w)+/)*(%s|[gG]esetz[-\w]*|[oO]rdnung[-\w]*)(/(\d|\w)+)*( [IVXLCDM]*)?"
-    % LAWS_STRING
-)
-P_ivm = re.compile(
-    r"([ ]?§ |[ ]?Art[.] |[ ]?Artikel |[ ]?§§ ).*?( [iI][.]?[Vv][.]?[mM][.]? ).*?((\d|\w)+/)*(%s|[gG]esetz[-\w]*|[oO]rdnung[-\w]*)(/(\d|\w)+)*( [IVXLCDM]*)?"
-    % LAWS_STRING
-)
-P_file = re.compile(r"[ ]?(\d+|[IVXLCDM]+) \w+ \d+[/.]\d+")
-P_split_ivm = re.compile(r" [iI][.]?[Vv][.]?[mM][.]? ")
 
 
 def is_roman(s):
@@ -215,8 +189,8 @@ def get_lawrefs_from_multi(s):
 
 def get_left_from_ivm(s):
     try:
-        result, law_complement = P_split_ivm.split(s), ""
-        if result[0].split(" ")[-1] not in LAWS_SET:
+        result, law_complement = P.P_split_ivm.split(s), ""
+        if result[0].split(" ")[-1] not in P.LAWS_SET:
             law_complement = result[1].split(" ")[-1]
 
         if law_complement != "":
@@ -239,7 +213,7 @@ def get_left_from_ivm(s):
 
 def get_right_from_ivm(s):
     try:
-        result = P_split_ivm.split(s)[1]
+        result = P.P_split_ivm.split(s)[1]
         if is_simple(result):
             return ms.SimpleLawRef.from_refstring(result)
 
@@ -301,17 +275,17 @@ def get_jahr_from_fileref(s):
 
 def remove_html(content, return_splitted=False):
     try:
-        if P_absatzRechts.search(content):
-            mn_split, mns = remove_html_absatzRechts(P_absatzRechts.split(content))
+        if P.P_absatzRechts.search(content):
+            mn_split, mns = remove_html_absatzRechts(P.P_absatzRechts.split(content))
 
-        elif P_rd.search(content):
-            mn_split, mns = remove_html_rd(P_rd.split(content))
+        elif P.P_rd.search(content):
+            mn_split, mns = remove_html_rd(P.P_rd.split(content))
 
-        elif P_nr.search(content):
-            mn_split, mns = remove_html_nr(P_nr.split(content))
+        elif P.P_nr.search(content):
+            mn_split, mns = remove_html_nr(P.P_nr.split(content))
 
-        elif P_point.search(content):
-            mn_split, mns = remove_html_point(P_point.split(content))
+        elif P.P_point.search(content):
+            mn_split, mns = remove_html_point(P.P_point.split(content))
 
         else:
             mn_split, mns = remove_html_none(content)
@@ -371,8 +345,8 @@ def remove_html_common(mn_split):
 
 def parse_simples(content):
     result = list()
-    for x in P_simple.finditer(content):
-        if P_split_ivm.search(x.group()):
+    for x in P.P_simple.finditer(content):
+        if P.P_split_ivm.search(x.group()):
             continue
 
         try:
@@ -388,8 +362,8 @@ def parse_simples(content):
 
 def parse_multis(content):
     result = list()
-    for x in P_multi.finditer(content):
-        if P_split_ivm.search(x.group()):
+    for x in P.P_multi.finditer(content):
+        if P.P_split_ivm.search(x.group()):
             continue
 
         try:
@@ -405,7 +379,7 @@ def parse_multis(content):
 
 def parse_ivms(content):
     result = list()
-    for x in P_ivm.finditer(content):
+    for x in P.P_ivm.finditer(content):
         try:
             result.append(
                 (ms.IVMLawRef.from_refstring(x.group().strip()), x.start(), x.end())
@@ -419,7 +393,7 @@ def parse_ivms(content):
 
 def parse_files(content):
     result = list()
-    for x in P_file.finditer(content):
+    for x in P.P_file.finditer(content):
         try:
             result.append(
                 (ms.FileRef.from_refstring(x.group().strip()), x.start(), x.end())
@@ -438,7 +412,8 @@ def parse_any(content):
             parse_multis(content),
             parse_ivms(content),
             parse_files(content),
-        ), key=lambda x: x[1],
+        ),
+        key=lambda x: x[1],
     )
 
 

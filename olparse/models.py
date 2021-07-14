@@ -12,6 +12,11 @@ class ReferenceException(Exception):
 
 
 class Reference(ABC):
+    @classmethod
+    @abstractmethod
+    def from_refstring(cls, refstring):
+        pass
+
     @abstractmethod
     def unpack(self) -> List[Reference]:
         pass
@@ -19,6 +24,7 @@ class Reference(ABC):
 
 class LawRef(Reference, ABC):
     pass
+
 
 @dataclass(frozen=True)
 class SimpleLawRef(LawRef):
@@ -44,15 +50,6 @@ class SimpleLawRef(LawRef):
     def unpack(self) -> List[SimpleLawRef]:
         return [self]
 
-    # def __hash__(self):
-    #     return hash(self.vorschrift + self.buch + self.paragraph + self.abs + self.satz + self.nr)
-
-    # def __eq__(self, other):
-    #     if type(other) != SimpleLawRef:
-    #         return False
-    #
-    #     return hash(self) == hash(other)
-
     def __str__(self):
         result = "§ %s" % self.paragraph
         if self.abs != "":
@@ -69,9 +66,6 @@ class SimpleLawRef(LawRef):
 
         return result + " %s" % self.vorschrift
 
-    # def __repr__(self):
-    #     return f"SimpleLawRef('{self.__str__()}')"
-
 
 @dataclass(frozen=True)
 class MultiLawRef(LawRef):
@@ -83,15 +77,6 @@ class MultiLawRef(LawRef):
 
     def unpack(self) -> List[SimpleLawRef]:
         return list(self.lawrefs)
-
-    # def __hash__(self):
-    #     return sum([hash(x) for x in self.lawrefs])
-    #
-    # def __eq__(self, other):
-    #     if type(other) != MultiLawRef:
-    #         return False
-    #
-    #     return hash(self) == hash(other)
 
     def __str__(self):
         return "§§ %s %s" % (
@@ -114,17 +99,8 @@ class IVMLawRef(LawRef):
     def unpack(self) -> List[SimpleLawRef]:
         return self.left.unpack() + self.right.unpack()
 
-    # def __hash__(self):
-    #     return sum([hash(self.left), hash(self.right)])
-    #
-    # def __eq__(self, other):
-    #     if type(other) != IVMLawRef:
-    #         return False
-    #
-    #     return hash(self) == hash(other)
-
     def __str__(self):
-        return "%s i.V.m %s" % (str(self.left), str(self.right))
+        return "%s i.V.m. %s" % (str(self.left), str(self.right))
 
 
 @dataclass(frozen=True)
@@ -147,38 +123,30 @@ class FileRef(Reference):
     def unpack(self) -> List[FileRef]:
         return [self]
 
-    # def __hash__(self):
-    #     return hash(str(self.n_kammer) + self.kammer + str(self.nr) + str(self.jahr))
-    #
-    # def __eq__(self, other):
-    #     if type(other) != FileRef:
-    #         return False
-    #
-    #     return hash(self) == hash(other)
-
     def __str__(self):
         return "%s %s %s/%s" % (self.n_kammer, self.kammer, self.nr, self.jahr)
 
+
 @dataclass()
 class Verdict:
-    slug:str
-    content:str
-    margin_numbers:str
-    simples:List
-    multis:List
-    ivms:List
-    files:List
+    slug: str
+    content: str
+    margin_numbers: str
+    simples: List
+    multis: List
+    ivms: List
+    files: List
 
     @classmethod
     def from_jsonstring(cls, jsonstring):
         _json = json.loads(jsonstring)
         content, margin_numbers = fs.remove_html(_json["content"])
         return cls(
-            slug = _json["slug"],
+            slug=_json["slug"],
             content=content,
             margin_numbers=margin_numbers,
-            simples = fs.parse_simples(content),
-            multis = fs.parse_multis(content),
-            ivms = fs.parse_ivms(content),
-            files = fs.parse_files(content),
+            simples=fs.parse_simples(content),
+            multis=fs.parse_multis(content),
+            ivms=fs.parse_ivms(content),
+            files=fs.parse_files(content),
         )
