@@ -5,6 +5,7 @@ from dataclasses import dataclass
 from functools import lru_cache
 import json
 import olparse.functions as fs
+import olparse.patterns as P
 
 
 class ReferenceException(Exception):
@@ -111,14 +112,13 @@ class FileRef(Reference):
     jahr: str
 
     @classmethod
-    @lru_cache(maxsize=100000)
     def from_refstring(cls, refstring):
-        return cls(
-            n_kammer=fs.get_n_kammer_from_fileref(refstring),
-            kammer=fs.get_kammer_from_fileref(refstring),
-            nr=fs.get_nr_from_fileref(refstring),
-            jahr=fs.get_jahr_from_fileref(refstring),
-        )
+        gdict = P.P_file.match(refstring).groupdict()
+        return cls(n_kammer=gdict["kammer"],
+                   kammer=gdict["regz"],
+                   nr=gdict["nr"],
+                   jahr=gdict["jahr"])
+
 
     def unpack(self) -> List[FileRef]:
         return [self]

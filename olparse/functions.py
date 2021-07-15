@@ -354,7 +354,7 @@ def parse_simples(content):
                 (ms.SimpleLawRef.from_refstring(x.group().strip()), x.start(), x.end())
             )
 
-        except ms.ReferenceException:
+        except ms.ReferenceException as e:
             continue
 
     return result
@@ -394,13 +394,19 @@ def parse_ivms(content):
 def parse_files(content):
     result = list()
     for x in P.P_file.finditer(content):
-        try:
-            result.append(
-                (ms.FileRef.from_refstring(x.group().strip()), x.start(), x.end())
+        gdict = x.groupdict()
+        result.append(
+            (
+                ms.FileRef(
+                    n_kammer=gdict["kammer"],
+                    kammer=gdict["regz"],
+                    nr=gdict["nr"],
+                    jahr=gdict["jahr"],
+                ),
+                x.start(),
+                x.end(),
             )
-
-        except ms.ReferenceException:
-            continue
+        )
 
     return result
 
