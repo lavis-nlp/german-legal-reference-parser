@@ -30,7 +30,7 @@ class LawRef(Reference, ABC):
 @dataclass(frozen=True)
 class SimpleLawRef(LawRef):
     vorschrift: str
-    buch: str
+    # buch: str
     paragraph: str
     abs: str
     satz: str
@@ -41,7 +41,7 @@ class SimpleLawRef(LawRef):
     def from_refstring(cls, refstring):
         return cls(
             vorschrift=fs.get_vorschrift_from_simple(refstring),
-            buch=fs.get_buch_from_simple(refstring),
+            # buch= "", #fs.get_buch_from_simple(refstring),
             paragraph=fs.get_paragraph_from_simple(refstring),
             abs=fs.get_abs_from_simple(refstring),
             satz=fs.get_satz_from_simple(refstring),
@@ -61,9 +61,9 @@ class SimpleLawRef(LawRef):
 
         if self.nr != "":
             result += " Nr. %s" % self.nr
-
-        if self.buch != "":
-            return result + " %s %s" % (self.vorschrift, self.buch)
+        #
+        # if self.buch != "":
+        #     return result + " %s %s" % (self.vorschrift, self.buch)
 
         return result + " %s" % self.vorschrift
 

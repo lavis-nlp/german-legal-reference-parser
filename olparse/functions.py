@@ -51,14 +51,16 @@ def is_simple(s):
 def is_multi(s):
     return s.count("§") == 2
 
-
+import traceback
 def get_vorschrift_from_simple(s):
     try:
-        result = s.split(" ")
-        if is_roman(result[-1]) or re.search(r"\d", result[-1]):
-            return result[-2]
-
-        return result[-1]
+        # result = s.split(" ")
+        # if is_roman(result[-1]) or re.search(r"\d", result[-1]):
+        #     return result[-2]
+        #
+        # return result[-1]
+        match =  P.P_vorschrift.search(s)
+        return match.group("Vorschrift")
 
     except Exception:
         raise ms.ReferenceException()
@@ -161,11 +163,7 @@ def get_nr_from_simple(s):
 
 def get_lawrefs_from_multi(s):
     try:
-        vorschrift, buch = get_vorschrift_from_simple(s), get_buch_from_simple(s)
-        if buch != "":
-            suffix = "%s %s" % (vorschrift, buch)
-        else:
-            suffix = vorschrift
+        suffix = P.P_simple.search(s).group("Vorschrift")
 
         _split, result = s[3:].split(", "), list()
         for x in _split:
