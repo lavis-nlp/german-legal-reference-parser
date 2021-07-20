@@ -337,7 +337,6 @@ def remove_html_common(mn_split):
         find_lt = mn_split[i].find("<")
         mns.append(int(mn_split[i][:find_lt]))
         mn_split[i] = BeautifulSoup(mn_split[i][find_lt:], "html.parser").get_text()
-
     return mn_split, mns
 
 

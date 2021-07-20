@@ -12,7 +12,7 @@ P_point = re.compile('<p [^>]*id="point[\d]+">')
 LAWS_SET = load_laws()
 LAWS_STRING = "|".join(LAWS_SET)
 P_vorschrift = re.compile(
-    r"(?P<Vorschrift>%s|[A-Z][\-\w]+[gG]esetz[\-\w]*|[A-Z][\-\w]+[oO]rdnung[\-\w]*( [IVXLCDM]*)?)"
+    r"(?P<Vorschrift>(%s|[A-Z][\-\w]+[gG]esetz|[A-Z][\-\w]+[oO]rdnung|[A-Z][\-\w]+VO)( ((SH)|(NRW)|[IVX]+))?)"
     % LAWS_STRING
 )
 P_simple = re.compile(r"( ?§ | ?Art\. | ?Artikel )[^§]{1,80}?" + P_vorschrift.pattern)

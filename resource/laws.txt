@@ -604,7 +604,7 @@ LAP-mntDBWVV
 LAP-mtDBWVV
 LASaarDV 1
 LASaarEG
-LBG( NRW)?
+LBG
 LeasFachwirtPrV
 LebensMAusbV
 LederVAusbV
@@ -867,18 +867,6 @@ SGB 6
 SGB 7
 SGB 8
 SGB 9
-SGB I
-SGB X
-SGB XI
-SGB XII
-SGB II
-SGB III
-SGB IV
-SGB V
-SGB VI
-SGB VII
-SGB VIII
-SGB IX
 SiebdrAusbV( 2011)?
 SiSchmAusbV
 SLV( 2002)?
@@ -1036,7 +1024,7 @@ VVG( 2008)?
 VWDG-DV
 VwFAngAusbV( 1999)?
 VwGO
-VwVfG( NRW)?
+VwVfG
 Wabau-AusbV( 2004)?
 WaffG( 2002)?
 WaffV 4
@@ -1130,7 +1118,7 @@ FreizügG
 KapVO( 2017)?
 LVV
 BPolBG
-LVwG( [SHNRW]+)?
+LVwG
 AsylG
 CoronaSchVO
 CoronaVO
@@ -1139,26 +1127,25 @@ EMRK
 GemO
 LWO
 BauGB
-GO NRW
+GO
 ERVV
 NDiszG
 Dublin III-VO
-JustG( NRW)?
+JustG
 GVO
-BauO( NRW)?
+BauO
 NJG
 BPO
 AuslG
 NHG
-OVP( NRW)?
+OVP
 PrüvV
-ZustAVO( NRW)?
-VwVG( NRW)?
+ZustAVO
+VwVG
 LRiStaG
-LPVG( NRW)?
+LPVG
 JAG
 JAVO
-Corona-BekämpfVO
 CoronaSchutzVO
 PflBG
 KAG
@@ -1167,6 +1154,6 @@ AmtsO
 AbwS
 BayVersG
 NV
-LZG( NRW)?
+LZG
 8. BayIfSMV
 PassG
