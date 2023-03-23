@@ -1,11 +1,9 @@
-# OpenLegalDataParser
+# German Legal Reference Parser
 
 This repository contains a library of python functions and classes with which
-you can parse law book and file references from documents of the OpenLegalData
-dataset and extract them into python objects. The implementation is incredibly
-efficient. You can parse the whole OpenLegalData dataset within less than 200
-minutes on modern machines. This README shall demonstrate how powerful this
-library is:
+you can parse references to regulations and files from legal documents such as those of [Open Legal Data](https://openlegaldata.io/).
+The implementation is efficient: The entire Open Legal Data corpus can be processed within 200
+minutes on modern machines. This README shall demonstrate the usage of this library.
 
 ## Definitions
 
@@ -379,4 +377,4 @@ The simplicity of the example code shows the power of this library.
 
 Pitambara Kevin Pech - programming, testing, dataset analysis, documentation
 
-Marco Wrzalik - concept and idea
+Marco Wrzalik - programming, concept and idea
